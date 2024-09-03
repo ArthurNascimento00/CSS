@@ -15,8 +15,12 @@
             --cor-fundo: #85bd60;
             --fundo-formulario: #ffffff;
             --borda-formulario: #dddddd;
+            --cor-hover-botao: #45a049;
+            --cor-active-botao: #388E3C;
+            --cor-focus-campo: #e0f7fa;
+            --cor-valid-texto: #4CAF50;
+            --cor-invalid-texto: #F44336;
         }
-
 
         * {
             margin: 0;
@@ -24,7 +28,6 @@
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif;
         }
-
 
         body {
             background-color: var(--cor-fundo);
@@ -34,7 +37,6 @@
             height: 100vh;
             padding: 20px;
         }
-
 
         .form-container {
             background-color: var(--fundo-formulario);
@@ -65,17 +67,29 @@
             border-radius: 4px;
         }
 
-        .form-container input[type="submit"] {
-            background-color: var(--cor-primaria);
-            color: var(--cor-secundaria);
-            border: none;
-            cursor: pointer;
-        }
-
+        /* Pseudo-classes aplicadas */
         .form-container input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: var(--cor-hover-botao);
+            transform: scale(1.05);
         }
 
+        .form-container input[type="submit"]:active {
+            background-color: var(--cor-active-botao);
+        }
+
+        .form-container input[type="text"]:focus,
+        .form-container input[type="email"]:focus {
+            background-color: var(--cor-focus-campo);
+            outline: none;
+        }
+
+        .form-container input[type="email"]:valid {
+            color: var(--cor-valid-texto);
+        }
+
+        .form-container input[type="email"]:invalid {
+            color: var(--cor-invalid-texto);
+        }
 
         .image-container {
             width: 50%;
