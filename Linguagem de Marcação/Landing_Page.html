@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Captura</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root {
+            --cor-primaria: #4CAF50;
+            --cor-secundaria: #ffffff;
+            --cor-fundo: #85bd60;
+            --fundo-formulario: #ffffff;
+            --borda-formulario: #dddddd;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+
+        body {
+            background-color: var(--cor-fundo);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+
+        .form-container {
+            background-color: var(--fundo-formulario);
+            padding: 20px;
+            border: 1px solid var(--borda-formulario);
+            border-radius: 8px;
+            width: 40%;
+        }
+
+        .form-container h1 {
+            color: var(--cor-primaria);
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--cor-primaria);
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid var(--borda-formulario);
+            border-radius: 4px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: var(--cor-primaria);
+            color: var(--cor-secundaria);
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+
+        .image-container {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Entre em Contato</h1>
+        <form action="#" method="post">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome..." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Seu email..." required>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <div class="image-container">
+        <img src="https://www.integrasist.com.br/dados/editor/image/historia_da_consultoria_empresarial1%281%29.jpg" alt="Imagem Empresarial">
+    </div>
+
+</body>
+</html>
